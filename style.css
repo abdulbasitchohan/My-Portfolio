@@ -113,23 +113,24 @@ canvas {
     width: fit-content;
     height: fit-content;
     /* background-color: rgba(49, 49, 49, 0.8); */
-    background-color: cadetblue;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px 15px;
     gap: 15px;
     overflow: hidden;
-    /* border-radius: 27px; */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
-    margin-bottom: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: inset 0px 0px 20px rgb(255 255 255 / 64%);
+    margin-bottom: 20px;
 }
 
 /* for all social containers*/
 .S-btns a {
     width: 52px;
     height: 52px;
-    background-color: rgba(117, 117, 117, 0);
+    background-color: rgba(255, 255, 255, 0);
     /* background-color: transparent; */
     display: flex;
     align-items: center;
@@ -137,6 +138,7 @@ canvas {
     justify-content: center;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
+    cursor: pointer;
 }
 
 .S-btns a:hover {
@@ -174,7 +176,8 @@ canvas {
     display: flex;
     scale: 1.3;
     position: absolute;
-    width: 17px;
+    width: 19px;
+    cursor: pointer;
     opacity: 1;
     transform: translateY(0px);
     transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
@@ -388,7 +391,7 @@ nav ul li a {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: linear-gradient(137.48deg, #8f51ea,#0044ff);
+    background: linear-gradient(137.48deg, #8f51ea, #0044ff);
     border-radius: 1.625rem;
 }
 
@@ -434,7 +437,7 @@ nav ul li a {
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .about-btn:hover .circle {
