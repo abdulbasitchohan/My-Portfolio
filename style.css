@@ -4,6 +4,8 @@
     box-sizing: border-box;
     transition: all 1.5s;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 10;
+
 }
 
 a {
@@ -18,7 +20,8 @@ body {
     animation: gradient 10s ease infinite;
     color: white;
     transition: all 1.2s;
-    position: relative;
+    /* position: relative; */
+    /* z-index: 0; */
     overflow-x: hidden;
 }
 
@@ -38,10 +41,10 @@ body {
 
 
 canvas {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
+    /* position: absolute; */
+    /* z-index: 0; */
+    /* top: 0;
+    left: 0; */
 }
 
 
@@ -124,6 +127,7 @@ canvas {
     border-bottom-right-radius: 25px;
     box-shadow: inset 0px 0px 20px rgb(255 255 255 / 64%);
     margin-bottom: 20px;
+    backdrop-filter: blur(4px);
 }
 
 /* for all social containers*/
@@ -142,7 +146,7 @@ canvas {
 }
 
 .S-btns a:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
     border-radius: 15px;
 }
 
@@ -264,7 +268,7 @@ canvas {
 }
 
 .card:hover::before {
-    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+    transform: rotate(190deg) scale(1); 
     border-radius: 50%;
     filter: blur(40px);
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -277,7 +281,8 @@ canvas {
 
 header {
     background-color: #02062e48;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
+    position: sticky;
 }
 
 
@@ -290,8 +295,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    /* position: sticky;
-    position: fixed; */
+    /* position: fixed; */
 }
 
 
@@ -303,7 +307,9 @@ nav ul {
 }
 
 nav .logo a {
-    font-weight: bold;
+
+    font-family: cursive;
+    font-weight: bolder;
     color: #ffff;
     cursor: pointer;
 }
@@ -330,7 +336,7 @@ nav ul li a {
 }
 
 /* section 1 start  */
-.sec-align {
+.sec-1 {
     width: 90vw;
     margin: auto;
     height: 85vh;
@@ -474,14 +480,38 @@ nav ul li a {
 }
 
 
-
-.sec-1_img img {
-    border-radius: 100%;
-    box-shadow: #00abffc4 0px 0px 20px 15px;
-}
-
 .card img {
     width: 100%;
     height: auto;
     border-radius: 100%;
+}
+
+
+.about-sec {
+    height: 100vh;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-sec img {
+    width: 350px;
+}
+
+.sec-1_img img {
+    border-radius: 100%;
+    box-shadow: #00abffc4 0px 0px 20px 5px;
+    transition: all 1.5s;
+}
+
+
+.about-sec img:hover{
+    box-shadow: 0px 0px 20px 5px#00dbde ;
+    /* background: radial-gradient(-45deg, #fc00ff, #00dbde); */
+    /* transform: rotate(190deg) scale(1); 
+    border-radius: 50%;
+    filter: blur(40px); */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
