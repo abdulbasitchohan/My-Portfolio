@@ -5,7 +5,7 @@
     transition: all 1.5s;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 10;
-
+    scroll-behavior: smooth;
 }
 
 a {
@@ -219,8 +219,8 @@ canvas {
 /* From Uiverse.io by gharsh11032000 */
 .card {
     position: relative;
-    /* width: 190px;
-  height: 254px; */
+    width: 470px;
+    height: 470px;
     /* background-color: #000; */
     display: flex;
     flex-direction: column;
@@ -229,6 +229,12 @@ canvas {
     gap: 12px;
     border-radius: 50%;
     cursor: pointer;
+    animation: b 10s ease infinite;
+
+}
+
+.card img{
+    
 }
 
 .card::before {
@@ -263,19 +269,41 @@ canvas {
 
 
 .card:hover::after {
-    filter: blur(50px);
+    /* filter: blur(50px); */
     border-radius: 50%;
 }
 
 .card:hover::before {
-    transform: rotate(190deg) scale(1); 
+    transform: rotate(190deg) scale(1);
     border-radius: 50%;
-    filter: blur(40px);
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* filter: blur(40px); */
+    transition: all 0.6s; 
+    /* cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
+@keyframes b {
+    0% {
+        transform: rotate(90deg) scale(1);
+    }
+    25%{
+        transform: rotate(120deg) scale(1);
 
-
+    }
+    50% {
+        /* background-position: 100%; */
+        transform: rotate(150deg) scale(1);
+    }
+    
+    75%{
+        transform: rotate(180deg) scale(1);
+        
+    }
+    
+    100% {
+        transform: rotate(200deg) scale(1);
+        /* background-position: 0%; */
+    }
+}
 
 /* header start  */
 
@@ -503,15 +531,59 @@ nav ul li a {
 .sec-1_img img {
     border-radius: 100%;
     box-shadow: #00abffc4 0px 0px 20px 5px;
-    transition: all 1.5s;
+    /* transition: all 1.5s; */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 
-.about-sec img:hover{
-    box-shadow: 0px 0px 20px 5px#00dbde ;
+.about-sec img:hover {
+    box-shadow: 0px 0px 20px 5px#00dbde;
     /* background: radial-gradient(-45deg, #fc00ff, #00dbde); */
     /* transform: rotate(190deg) scale(1); 
     border-radius: 50%;
     filter: blur(40px); */
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+
+.pjt-sec {
+    height: 95vh;
+    width: 90vw;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.pjt-box {
+    border-radius: 3px;
+    border-top-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    padding: 15px;
+    background-color: #fff;
+    width: fit-content;
+    box-shadow: 4px 6px 17px 2px #000;
+}
+
+.pjt-box>.box-img {
+    background-color: #02062e;
+    /* background-color: black; */
+    max-width: 300px;
+    height: 200px;
+    padding: 20px;
+
+}
+
+
+.pjt-box>.box-txt {
+    background-color: #045174;
+    /* background-color: black; */
+    max-width: 300px;
+    padding: 20px;
+
 }
