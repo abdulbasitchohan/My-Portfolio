@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 1.5s;
     font-family: Arial, Helvetica, sans-serif;
-    z-index: 10;
     scroll-behavior: smooth;
+    transition: all 0.7s;
+}
+
+abbr[title] {
+    text-decoration: none;
 }
 
 a {
@@ -39,13 +42,13 @@ body {
     }
 }
 
-/* 
+
 canvas {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-} */
+    /* position: absolute; */
+    z-index: -30;
+    /* top: 0;
+    left: 0; */
+}
 
 
 .hero {
@@ -115,19 +118,22 @@ canvas {
 .S-btns {
     width: fit-content;
     height: fit-content;
-    /* background-color: rgba(49, 49, 49, 0.8); */
     background-color: transparent;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px 15px;
     gap: 15px;
+    padding: 15px 15px;
     overflow: hidden;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
     box-shadow: inset 0px 0px 20px rgb(255 255 255 / 64%);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     backdrop-filter: blur(4px);
+    position: fixed;
+    right: 5px;
+    top: 40%;
 }
 
 /* for all social containers*/
@@ -135,7 +141,8 @@ canvas {
     width: 52px;
     height: 52px;
     background-color: rgba(255, 255, 255, 0);
-    /* background-color: transparent; */
+    background-color: transparent;
+    color: #ffff;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -143,6 +150,7 @@ canvas {
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .S-btns a:hover {
@@ -150,33 +158,34 @@ canvas {
     border-radius: 15px;
 }
 
-/*instagram*/
-.S-btns a:nth-child(1):hover {
-    background-color: #d62976;
-}
-
-/* twitter*/
-.S-btns a:nth-child(2):hover {
-    background-color: #00acee;
-}
-
-/* linkdin*/
-.S-btns a:nth-child(3):hover {
+/* linkedin */
+.S-btns #linkedin:hover {
     background-color: #0072b1;
+
 }
 
-/* Whatsapp*/
-.S-btns a:nth-child(4):hover {
+/* Whatsapp */
+.S-btns #whatsapp:hover {
     background-color: #25d366;
 }
 
-.S-btns a:active {
-    transform: scale(1.1);
-    transition-duration: 0.3s;
+/* Github */
+.S-btns #github:hover {
+    background-color: #111111;
+
 }
 
+.S-btns #email:hover {
+    background: linear-gradient(135deg, #ff922b, #ff3131);
+}
+
+/* .S-btns a:active {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+} */
+
 /*first-child*/
-.S-btns a svg:first-child {
+/* .S-btns a svg:first-child {
     display: flex;
     scale: 1.3;
     position: absolute;
@@ -185,19 +194,19 @@ canvas {
     opacity: 1;
     transform: translateY(0px);
     transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
-}
+} */
 
-.S-btns a svg:first-child path {
+/* .S-btns>a{
     fill: rgb(255, 255, 255);
-}
+} */
 
-.S-btns a:hover svg:first-child {
+/* .S-btns a:hover a:first-child path {
     transform: translateY(-40px);
     opacity: 0;
-}
+} */
 
 /*last-child*/
-.S-btns a svg:last-child {
+/* .S-btns a a:first-child path {
     display: flex;
     position: absolute;
     width: 17px;
@@ -206,21 +215,21 @@ canvas {
     transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
-.S-btns a svg:last-child path {
+.S-btns a a:last-child path {
     fill: rgb(255, 255, 255);
 }
 
-.S-btns a:hover svg:last-child {
+.S-btns a:hover a:last-child path {
     opacity: 1;
     transform: translateY(0px);
-}
+} */
 
 
 /* From Uiverse.io by gharsh11032000 */
 .card {
     position: relative;
-    width: 470px;
-    height: 470px;
+    width: 430px;
+    height: 430px;
     /* background-color: #000; */
     display: flex;
     flex-direction: column;
@@ -229,13 +238,9 @@ canvas {
     gap: 12px;
     border-radius: 50%;
     cursor: pointer;
-    animation: b 10s ease infinite;
-
+    animation: updown 3s ease-in-out infinite;
 }
 
-.card img{
-    
-}
 
 .card::before {
     content: '';
@@ -269,54 +274,46 @@ canvas {
 
 
 .card:hover::after {
-    /* filter: blur(50px); */
+    filter: blur(50px);
     border-radius: 50%;
 }
 
 .card:hover::before {
     transform: rotate(190deg) scale(1);
     border-radius: 50%;
-    /* filter: blur(40px); */
-    transition: all 0.6s; 
+    filter: blur(40px);
+    transition: all 0.6s;
     /* cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
-@keyframes b {
-    0% {
-        transform: rotate(90deg) scale(1);
-    }
-    25%{
-        transform: rotate(120deg) scale(1);
+@keyframes updown {
 
-    }
-    50% {
-        /* background-position: 100%; */
-        transform: rotate(150deg) scale(1);
-    }
-    
-    75%{
-        transform: rotate(180deg) scale(1);
-        
-    }
-    
+    0%,
     100% {
-        transform: rotate(200deg) scale(1);
-        /* background-position: 0%; */
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
     }
 }
 
 /* header start  */
 
 header {
+    width: 100vw;
+    height: 90px;
     background-color: #02062e48;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     position: sticky;
+    top: 0%;
+    z-index: 10;
 }
 
 
 
 nav {
-    width: 90vw;
+    width: 85vw;
     margin: auto;
     color: white;
     display: flex;
@@ -363,14 +360,22 @@ nav ul li a {
     border-radius: 8px;
 }
 
+.ddd {
+    height: 100vh;
+    /* display: flex; */
+}
+
 /* section 1 start  */
 .sec-1 {
-    width: 90vw;
-    margin: auto;
-    height: 85vh;
+    width: 85vw;
+    margin: 10px auto;
+    height: 95vh;
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
+    /* z-index: ; */
+    /* position: sticky; */
 }
 
 .sec-1_cnt {
@@ -517,9 +522,10 @@ nav ul li a {
 .about-sec {
     position: relative;
     height: 100vh;
-    width: 90vw;
+    width: 85vw;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -549,14 +555,116 @@ nav ul li a {
 
 .pjt-sec {
     height: 95vh;
-    width: 90vw;
+    width: 85vw;
     margin: 10px auto;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
     align-items: center;
 
+}
+
+/* Card Container */
+.pjt-card {
+    width: 320px;
+    height: 420px;
+    perspective: 1200px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+
+.pjt-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.pjt-txt,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 30px;
+    border-top-right-radius:   30px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    color: #fff;
+}
+
+/* Front */
+.pjt-txt img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.pjt-txt h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.pjt-txt p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* Back */
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-back h3 {
+    margin-bottom: 15px;
+}
+
+.pjt-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pjt-btns>button {
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-live {
+    border: none;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    color: #fff;
+}
+
+.btn-code {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.08);
 }
 
 
