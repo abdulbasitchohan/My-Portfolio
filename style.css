@@ -668,30 +668,5 @@ button:hover {
 }
 
 
-.pjt-box {
-    border-radius: 3px;
-    border-top-left-radius: 22px;
-    border-bottom-right-radius: 22px;
-    padding: 15px;
-    background-color: #fff;
-    width: fit-content;
-    box-shadow: 4px 6px 17px 2px #000;
-}
-
-.pjt-box>.box-img {
-    background-color: #02062e;
-    /* background-color: black; */
-    max-width: 300px;
-    height: 200px;
-    padding: 20px;
-
-}
 
 
-.pjt-box>.box-txt {
-    background-color: #045174;
-    /* background-color: black; */
-    max-width: 300px;
-    padding: 20px;
-
-}
