@@ -179,51 +179,6 @@ canvas {
     background: linear-gradient(135deg, #ff922b, #ff3131);
 }
 
-/* .S-btns a:active {
-    transform: scale(1.1);
-    transition-duration: 0.3s;
-} */
-
-/*first-child*/
-/* .S-btns a svg:first-child {
-    display: flex;
-    scale: 1.3;
-    position: absolute;
-    width: 19px;
-    cursor: pointer;
-    opacity: 1;
-    transform: translateY(0px);
-    transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
-} */
-
-/* .S-btns>a{
-    fill: rgb(255, 255, 255);
-} */
-
-/* .S-btns a:hover a:first-child path {
-    transform: translateY(-40px);
-    opacity: 0;
-} */
-
-/*last-child*/
-/* .S-btns a a:first-child path {
-    display: flex;
-    position: absolute;
-    width: 17px;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.15, 0.83, 0.66, 1);
-}
-
-.S-btns a a:last-child path {
-    fill: rgb(255, 255, 255);
-}
-
-.S-btns a:hover a:last-child path {
-    opacity: 1;
-    transform: translateY(0px);
-} */
-
 
 /* From Uiverse.io by gharsh11032000 */
 .card {
@@ -594,7 +549,7 @@ nav ul li a {
     backface-visibility: hidden;
     /* border-radius: 20px; */
     border-bottom-left-radius: 30px;
-    border-top-right-radius:   30px;
+    border-top-right-radius: 30px;
     overflow: hidden;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.08);
@@ -667,6 +622,92 @@ button:hover {
     transform: scale(1.08);
 }
 
+.skills-sec {
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-sec>h1 {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.skills-icon {
+    width: 80vw;
+    margin: 30px auto;
+    /* height: 95vh; */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    /* align-items: center; */
+
+}
+
+.skill-card {
+    width: 150px;
+    height: 150px;
+    perspective: 1200px;
+    /* padding: 0 20px; */
+}
+
+.skill-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+
+.skill-card:hover .skill-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.skill-txt,
+.skill-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* text-align: center; */
+}
 
 
+.skill-txt {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    border: none;
+    box-shadow: none;
+}
 
+/* Front */
+/* .skill-txt img {
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+} */
+
+
+/* Back */
+.skill-back {
+    transform: rotateY(180deg);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+}
