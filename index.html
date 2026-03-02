@@ -10,36 +10,8 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://img.icons8.com/color/48/html-5--v1.png">
-    <style>
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-
-        /* .front i {
-            font-size: 50px;
-        }
-
-        .back {
-            transform: rotateY(180deg);
-            font-weight: bold;
-        }
-
-        /* icon colors */
-        /* .html i { 
-            color: #e34c26;
-        }
-
-        .css i {
-            color: #264de4;
-        }
-
-        .js i {
-            color: #f0db4f;
-        } */
-    </style>
 </head>
 
 <body>
@@ -67,7 +39,7 @@
     </header>
 
     <section class="sec-1" id="home">
-        <div class="sec-1_cnt">
+        <div class="sec-1_cnt" data-aos="fade-right">
             <div class="hero">
                 <h1>Hi, I'm <span class="name">Abdul Basit</span></h1>
                 <h2 class="typewriter">
@@ -79,19 +51,24 @@
 
 
             <!-- From Uiverse.io by zaeniahmad-id -->
-            <div class="S-btns">
+            <div class="S-btns" >
                 <a id="linkedin" href="https://linkedin.com/in/abdul-basit-tech/">
                     <abbr title="Linkedin">
                         <i class="ri-linkedin-fill"></i>
                     </abbr>
                 </a>
                 <abbr title="Whatsapp">
-
-                    <a id="whatsapp" href="https://whatsapp.com">
-
+                    <a id="whatsapp"
+                        href="https://wa.me/923113444105?text=Hello%20I%20want%20to%20discuss%20a%20project"
+                        target="_blank">
+                        <!-- <button>Chat on WhatsApp</button> -->
                         <i class="ri-whatsapp-line"></i>
 
                     </a>
+                    <!-- <a id="whatsapp" href="https://whatsapp.com">
+
+
+                    </a> -->
                 </abbr>
 
                 <abbr title="GitHub">
@@ -102,13 +79,13 @@
 
                     </a>
                 </abbr>
+
                 <abbr title="Gmail">
-
-                    <a id="email" href="https://abdulbasitchohan40@gmail.com">
-
+                    <a id="email" target="_blank"
+                        href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrfScmxnDgWQQcTjqQvTNMsZMnnmtnkfXNmWtQBXNHRJXvXLtLNDdQQhdLlNhwZgZkRXJq">
                         <i class="ri-mail-line"></i>
-
                     </a>
+
                 </abbr>
 
             </div>
@@ -125,7 +102,7 @@
             </a>
 
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-left">
             <img src="./My_img.png" alt="Profile Image">
         </div>
 
@@ -155,7 +132,7 @@
     <section id="skills" class="skills-sec">
 
 
-        <h1>Skills</h1>
+        <h1>My Skills</h1>
         <div class="skills-icon">
 
             <!-- HTML -->
@@ -172,7 +149,7 @@
 
                     <!-- Back Side -->
                     <div class="skill-back">
-                        <p>HTML5</p>
+                        <p id="text">HTML5</p>
                     </div>
 
                 </div>
@@ -212,7 +189,7 @@
 
                     <!-- Back Side -->
                     <div class="skill-back">
-                        <p style="font-size: 1.8rem;">JavaScript </p>
+                        <p style="font-size: 1.7rem;">JavaScript </p>
                     </div>
 
                 </div>
@@ -232,7 +209,7 @@
 
                     <!-- Back Side -->
                     <div class="skill-back">
-                        <p>Bootstrap</p>
+                        <p style="font-size: 1.7rem;">Bootstrap</p>
                     </div>
 
                 </div>
@@ -302,118 +279,102 @@
         </div>
     </section>
     <!-- SECTOIN 4 PROJECTS SECTION  -->
-    <section class="pjt-sec" id="projects">
 
-        <div class="pjt-card">
-            <div class="card-inner">
 
-                <!-- Front Side -->
-                <div class="pjt-txt">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
-                    <h2>Luxury Portfolio</h2>
-                    <p>Modern responsive website with elegant UI and smooth animations.</p>
-                </div>
+    <section class="pjt-sec">
 
-                <!-- Back Side -->
-                <div class="card-back">
-                    <h3>Project Details</h3>
-                    <p>Built with HTML, CSS, and JavaScript. Fully responsive and optimized.</p>
+        <div id="projects">
+            <h1>My Projects</h1>
+        </div>
 
-                    <div class="pjt-btns">
-                        <button class="btn-live">Live Demo</button>
-                        <button class="btn-code">Source Code</button>
+        <div class="pjt-align">
+            <div class="pjt-card">
+                <div class="card-inner">
+
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
+                        <h2>Luxury Portfolio</h2>
+                        <p>Modern responsive website with elegant UI and smooth animations.</p>
                     </div>
-                </div>
 
-            </div>
-        </div>
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <p>Built with HTML, CSS, and JavaScript. Fully responsive and optimized.</p>
 
-        <div class="pjt-card">
-            <div class="card-inner">
-
-                <!-- Front Side -->
-                <div class="pjt-txt">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
-                    <h2>Luxury Portfolio</h2>
-                    <p>Modern responsive website with elegant UI and smooth animations.</p>
-                </div>
-
-                <!-- Back Side -->
-                <div class="card-back">
-                    <h3>Project Details</h3>
-                    <p>Built with HTML, CSS, and JavaScript. Fully responsive and optimized.</p>
-
-                    <div class="pjt-btns">
-                        <button class="btn-live">Live Demo</button>
-                        <button class="btn-code">Source Code</button>
+                        <div class="pjt-btns">
+                            <button class="btn-live">Live Demo</button>
+                            <button class="btn-code">Source Code</button>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
 
-        <div class="pjt-card">
-            <div class="card-inner">
 
-                <!-- Front Side -->
-                <div class="pjt-txt">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
-                    <h2>Luxury Portfolio</h2>
-                    <p>Modern responsive website with elegant UI and smooth animations.</p>
-                </div>
+            <div class="pjt-card">
+                <div class="card-inner">
 
-                <!-- Back Side -->
-                <div class="card-back">
-                    <h3>Project Details</h3>
-                    <p>Built with HTML, CSS, and JavaScript. Fully responsive and optimized.</p>
-
-                    <div class="pjt-btns">
-                        <button class="btn-live">Live Demo</button>
-                        <button class="btn-code">Source Code</button>
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
+                        <h2>Luxury Portfolio</h2>
+                        <p>Modern responsive website with elegant UI and smooth animations.</p>
                     </div>
+
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <p>Built with HTML, CSS, and JavaScript. Fully responsive and optimized.</p>
+
+                        <div class="pjt-btns">
+                            <button class="btn-live">Live Demo</button>
+                            <button class="btn-code">Source Code</button>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
 
+
+            <div class="pjt-card">
+                <div class="card-inner">
+
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
+                        <h2>Luxury Portfolio</h2>
+                        <p>Modern responsive website with elegant UI and smooth animations.</p>
+                    </div>
+
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <p>Built with HTML, CSS, and JavaScript. Fully responsive and optimized.</p>
+
+                        <div class="pjt-btns">
+                            <button class="btn-live">Live Demo</button>
+                            <button class="btn-code">Source Code</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
-        <!-- <div class="pjt-box">
-            <div class="box-img">
-                <h1>
-                    Project 1
-                </h1>
-            </div>
-            <div class="box-txt">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, rem quam. Nemo ex est dolores
-                    dicta
-                    neque reprehenderit quaerat non.
-                </p>
-            </div>
-        </div>
+        <button class="more-pjt"> More Projects</button>
 
-        <div class="pjt-box">
-            <div class="box-img">
-                <h1>
-                    Project 1
-                </h1>
-            </div>
-            <div class="box-txt">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, rem quam. Nemo ex est
-                    dolores dicta
-                    neque reprehenderit quaerat non.
-                </p>
-            </div>
-        </div> -->
     </section>
 
-    <!-- <img width="96" height="96" src="https://img.icons8.com/sf-regular/96/github.png" alt="github"/>
-        <img width="100" height="100" src="https://img.icons8.com/sf-black/100/github.png" alt="github"/> -->
-    <!-- <img width="100" height="100" src="https://img.icons8.com/sf-ultralight/100/github.png" alt="github"/> -->
 </body>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 <script src="./script.js"></script>
 
