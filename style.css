@@ -649,6 +649,11 @@ nav ul li a {
     transform: rotateY(180deg);
 }
 
+
+.back {
+    margin: 20px;
+}
+
 /* Front & Back */
 .pjt-txt,
 .card-back {
@@ -827,7 +832,7 @@ button:hover {
 
 /* Divider */
 .divider {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.226);
     width: 1px;
 }
 
@@ -869,11 +874,12 @@ button:hover {
 
 .info-item>p {
     font-size: 1.5rem;
+    font-family: serif;
 }
 
 .info-item:hover {
 
-    background: linear-gradient(120deg,#02062e33);
+    background: linear-gradient(120deg, #02062e33);
     /* background: rgba(45, 112, 255, 0.349); */
     transform: translateX(8px);
 }
@@ -892,4 +898,17 @@ button:hover {
     .divider {
         display: none;
     }
+}
+
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #02062e48;
+    backdrop-filter: blur(5px);
+    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

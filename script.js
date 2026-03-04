@@ -149,7 +149,7 @@ window.addEventListener("resize", () => {
 
 
 
-const textElement = document.getElementById("text");
+let textElement = document.getElementById("text");
 
 const words = [
     "Frontend Developer",
