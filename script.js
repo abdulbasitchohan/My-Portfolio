@@ -1,6 +1,47 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+// let allPjts = document.getElementById('All-pjts')
+// // allPjts.style.display = "Flex";
+
+// let pjtBtn = document.querySelector('.more-pjt')
+
+// pjtBtn.addEventListener("click", () => {
+//     allPjts.style.display = "Flex";
+//     allPjts.style.zIndex = "20"
+// });
+
+
+const socialBtns = document.querySelector(".S-btns")
+const contactSection = document.querySelector("#contact")
+
+
+window.addEventListener("scroll", () => {
+
+    const contactTop = contactSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Jab contact section screen me aaye
+    if (contactTop <= windowHeight / 2) {
+        // socialBtns.style.position = "absolute";
+        // socialBtns.style.zIndex = "20";
+        // socialBtns.style.left = "5px";
+        // socialBtns.style.bottom = "30%";
+        // // socialBtns.style.flexDirection = 'row'
+        // socialBtns.style.transform = "translate(50%, -50%)";
+        socialBtns.style.display = "none"
+    } else {
+        socialBtns.style.display = "flex"
+        socialBtns.style.position = "fixed";
+        socialBtns.style.right = "5px";
+        socialBtns.style.top = "50%";
+        socialBtns.style.transform = "translateY(-50%)";
+        socialBtns.style.flexDirection = 'column'
+    }
+
+});
+
+
 function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

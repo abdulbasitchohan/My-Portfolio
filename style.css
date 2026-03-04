@@ -142,7 +142,8 @@ canvas {
     backdrop-filter: blur(4px);
     position: fixed;
     right: 5px;
-    top: 40%;
+    top: 35%;
+
 }
 
 /* for all social containers*/
@@ -624,6 +625,7 @@ nav ul li a {
 .pjt-align {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -770,4 +772,124 @@ button:hover {
 
 .more-pjt:hover::before {
     width: 250%;
+}
+
+
+/* 
+#All-pjts {
+    display: none;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+} */
+
+
+/* SECTION */
+.contact-section {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 30px;
+}
+
+/* Glow background */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #3f96fa 0%, transparent 70%);
+    filter: blur(120px);
+    opacity: 0.3;
+}
+
+/* CARD */
+.contact-card {
+    position: relative;
+    backdrop-filter: blur(10px);
+    /* background: linear-gradient(145deg, #1a1a22, #111117); */
+    /* background-color: #ffffff2f; */
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 60px;
+    width: 80vw;
+    box-shadow: inset 0px 0px 20px 4px rgb(255 255 255 / 64%);
+    /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); */
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 40px;
+    z-index: 1;
+}
+
+/* Divider */
+.divider {
+    background: rgba(255, 255, 255, 0.08);
+    width: 1px;
+}
+
+/* LEFT SIDE */
+.contact-left h2 {
+    color: #277cec;
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+}
+
+.contact-left p {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+
+/* RIGHT SIDE */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-right a {
+    color: #ffffff;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.info-item>p {
+    font-size: 1.5rem;
+}
+
+.info-item:hover {
+
+    background: linear-gradient(120deg,#02062e33);
+    /* background: rgba(45, 112, 255, 0.349); */
+    transform: translateX(8px);
+}
+
+.info-item span {
+    font-weight: 600;
+    color: #00f2ff;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .divider {
+        display: none;
+    }
 }
