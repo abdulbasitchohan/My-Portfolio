@@ -700,7 +700,6 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
-    /* align-items: center; */
 }
 
 .skill-card {
