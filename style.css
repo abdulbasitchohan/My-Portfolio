@@ -143,7 +143,7 @@ canvas {
     position: fixed;
     right: 5px;
     top: 35%;
-
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* for all social containers*/
@@ -304,15 +304,56 @@ nav .logo a {
     cursor: pointer;
 }
 
-nav ul li {
-    margin: 0 10px;
+/* Nav Links */
+nav ul {
     list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    color: white;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    transition: 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Gold Underline Animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    /* background: linear-gradient(90deg, #d4af37, #f5e27a); */
+    background: linear-gradient(90deg, #277cec, #ff58de);
+    transition: 0.4s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    /* background: linear-gradient(90deg, #277cec, #ff58de);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #27c4ec;
+    font-weight: bold;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Glow Effect */
+nav ul li a:hover {
+    /* text-shadow: 0 0 10px rgba(245, 226, 122, 0.7); */
 }
 
 #download-btn {
@@ -517,13 +558,134 @@ nav ul li a {
 }
 
 
+.download-btn {
+    --width: 130px;
+    --height: 40px;
+    --tooltip-height: 40px;
+    --tooltip-width: 95px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #1163ff;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border: 2px solid #ffff;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+}
+
+.download-btn::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.download-btn::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.download-btn::after,
+.download-btn::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.download-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-wrap,
+.download-text,
+.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.download-text {
+    top: 0
+}
+
+.download-text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.download-btn:hover {
+    background: #6c18ff;
+}
+
+.download-btn:hover .download-text {
+    top: -100%;
+}
+
+.download-btn:hover .icon {
+    top: 0;
+}
+
+.download-btn:hover:before,
+.download-btn:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.download-btn:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.download-btn:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+
 .skills-sec {
     height: 80vh;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    /* display: grid; */
     justify-content: space-evenly;
-    /* align-items: center; */
+    align-items: center;
+    flex-wrap: wrap;
     margin: 30px auto;
-
+    
 }
 
 .skills-sec>h1 {
@@ -542,6 +704,7 @@ nav ul li a {
 }
 
 .skill-card {
+    flex-wrap: wrap;
     width: 150px;
     height: 150px;
     perspective: 1200px;
@@ -649,10 +812,83 @@ nav ul li a {
     transform: rotateY(180deg);
 }
 
-
-.back {
-    margin: 20px;
+/* From Uiverse.io by xopc333 */
+.back-btn {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 2%;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    /* margin: 10px; */
+    cursor: pointer;
+    border: 0;
 }
+
+.back-btn:before,
+.back-btn:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+}
+
+.back-btn:before {
+    border: 4px solid #f0eeef;
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.back-btn:after {
+    border: 4px solid #96daf0;
+    transform: scale(1.3);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+
+.back-btn:hover:before,
+.back-btn:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.back-btn:hover:after,
+.back-btn:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.back-btn-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.back-btn-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #f0eeef;
+}
+
+.back-btn:hover .button-box,
+.back-btn:focus .button-box {
+    transition: 0.4s;
+    transform: translateX(-56px);
+}
+
 
 /* Front & Back */
 .pjt-txt,
@@ -678,17 +914,18 @@ nav ul li a {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    object-position: top;
     border-radius: 15px;
     margin-bottom: 20px;
 }
 
 .pjt-txt h2 {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .pjt-txt p {
-    font-size: 14px;
+    font-size: 1rem;
     opacity: 0.85;
 }
 
@@ -712,7 +949,8 @@ nav ul li a {
     margin-top: 20px;
 }
 
-.pjt-btns>button {
+.pjt-btns>a>button {
+    color: #fff;
     padding: 10px 18px;
     border-radius: 25px;
     cursor: pointer;
