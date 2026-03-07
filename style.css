@@ -275,7 +275,10 @@ header {
     z-index: 10;
 }
 
-
+.menu {
+    display: none;
+    font-size: 2rem;
+}
 
 nav {
     width: 85vw;
@@ -289,6 +292,10 @@ nav {
 }
 
 
+/* Glow Effect */
+nav .logo a:hover {
+    text-shadow: 0 0 10px rgba(245, 226, 122, 0.7);
+}
 
 nav ul {
     list-style: none;
@@ -340,9 +347,6 @@ nav ul li a::after {
 
 /* Hover Effect */
 nav ul li a:hover {
-    /* background: linear-gradient(90deg, #277cec, #ff58de);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     color: #27c4ec;
     font-weight: bold;
 }
@@ -351,10 +355,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Glow Effect */
-nav ul li a:hover {
-    /* text-shadow: 0 0 10px rgba(245, 226, 122, 0.7); */
-}
 
 #download-btn {
     background-color: cadetblue;
@@ -366,10 +366,6 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
-.ddd {
-    height: 100vh;
-    /* display: flex; */
-}
 
 /* section 1 start  */
 .sec-1 {
@@ -685,7 +681,7 @@ nav ul li a:hover {
     align-items: center;
     flex-wrap: wrap;
     margin: 30px auto;
-    
+
 }
 
 .skills-sec>h1 {
@@ -1148,4 +1144,238 @@ footer {
     position: relative;
     overflow: hidden;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* 
+@media (max-width : 600px) {
+    nav ul  {
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+
+    .card{
+        height: auto;
+        top: 50%;
+    }
+
+     
+
+    .S-btns{
+        display: none;
+
+    }
+
+    .skills-icon {
+        grid-template-columns: auto auto;
+    }
+} */
+
+
+
+/* =========================
+TABLET (1024px)
+========================= */
+
+@media (max-width:1024px) {
+
+    .sec-1 {
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .sec-1_cnt>p {
+        width: 100%;
+    }
+
+    .card {
+        width: 320px;
+        height: 320px;
+    }
+
+    .about-sec {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-sec img {
+        width: 280px;
+    }
+
+    .skills-icon {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .pjt-align {
+        justify-content: center;
+    }
+
+    .contact-card {
+        width: 90vw;
+    }
+
+}
+
+
+/* =========================
+TABLET SMALL (768px)
+========================= */
+
+@media (max-width:768px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .sec-1_cnt>h1 {
+        font-size: 3rem;
+    }
+
+    .typewriter {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 260px;
+        height: 260px;
+    }
+
+    .skills-icon {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .pjt-card {
+        width: 280px;
+    }
+
+    .contact-card {
+        padding: 40px;
+    }
+
+    .contact-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-left p {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* =========================
+MOBILE (480px)
+========================= */
+
+@media (max-width:480px) {
+
+    nav {
+        width: 95vw;
+    }
+
+    .sec-1 {
+        width: 95vw;
+    }
+
+    .sec-1_cnt>h1 {
+        font-size: 2.3rem;
+    }
+
+    .typewriter {
+        font-size: 1.6rem;
+    }
+
+    .sec-1_cnt>p {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-sec {
+        width: 95vw;
+    }
+
+    .about-sec img {
+        width: 220px;
+    }
+
+    .skills-sec {
+        height: auto;
+    }
+
+    .skills-icon {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skill-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .pjt-sec {
+        width: 95vw;
+    }
+
+    .pjt-card {
+        width: 100%;
+    }
+
+    .contact-card {
+        width: 95vw;
+        padding: 30px;
+    }
+
+    .info-item span {
+        font-size: 0.9rem;
+    }
+
+    .S-btns {
+        display: none;
+    }
+
+}
+
+
+/* =========================
+EXTRA SMALL (360px)
+========================= */
+
+@media (max-width:360px) {
+
+    .sec-1_cnt>h1 {
+        font-size: 2rem;
+    }
+
+    .typewriter {
+        font-size: 1.4rem;
+    }
+
+    .skill-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills-icon {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-left h2 {
+        font-size: 1.3rem;
+    }
+
 }
