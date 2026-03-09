@@ -7,125 +7,6 @@
     <title>Projects</title>
     <link rel="stylesheet" href="./style.css">
 
-    <style>
-        /* From Uiverse.io by satyamchaudharydev */
-        .download-btn {
-            --width: 100px;
-            --height: 35px;
-            --tooltip-height: 35px;
-            --tooltip-width: 90px;
-            --gap-between-tooltip-to-button: 18px;
-            --button-color: #1163ff;
-            --tooltip-color: #fff;
-            width: var(--width);
-            height: var(--height);
-            background: var(--button-color);
-            position: relative;
-            text-align: center;
-            border-radius: 0.45em;
-            font-family: "Arial";
-            transition: background 0.3s;
-        }
-
-        .download-btn::before {
-            position: absolute;
-            content: attr(data-tooltip);
-            width: var(--tooltip-width);
-            height: var(--tooltip-height);
-            background-color: var(--tooltip-color);
-            font-size: 0.9rem;
-            color: #111;
-            border-radius: .25em;
-            line-height: var(--tooltip-height);
-            bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-            left: calc(50% - var(--tooltip-width) / 2);
-        }
-
-        .download-btn::after {
-            position: absolute;
-            content: '';
-            width: 0;
-            height: 0;
-            border: 10px solid transparent;
-            border-top-color: var(--tooltip-color);
-            left: calc(50% - 10px);
-            bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-        }
-
-        .download-btn::after,
-        .download-btn::before {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s;
-        }
-
-        .download-text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .download-wrap,
-        .download-text,
-        .icon {
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            color: #fff;
-        }
-
-        .download-text {
-            top: 0
-        }
-
-        .download-text,
-        .icon {
-            transition: top 0.5s;
-        }
-
-        .icon {
-            color: #fff;
-            top: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .icon svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        .download-btn:hover {
-            background: #6c18ff;
-        }
-
-        .download-btn:hover .download-text {
-            top: -100%;
-        }
-
-        .download-btn:hover .icon {
-            top: 0;
-        }
-
-        .download-btn:hover:before,
-        .download-btn:hover:after {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .download-btn:hover:after {
-            bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-        }
-
-        .download-btn:hover:before {
-            bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-        }
-    </style>
-
-
 </head>
 
 <body>
@@ -158,7 +39,7 @@
 
     <section class="pjt-sec">
 
-
+        <h1>All Projects</h1>
         <div class="pjt-align">
             <div class="pjt-card">
                 <div class="card-inner">
@@ -193,6 +74,66 @@
 
                 </div>
             </div>
+            <div class="pjt-card">
+                <div class="card-inner">
+
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="./Assets/project-img/quiz-app.png" alt="Project">
+
+                        <h2>Quiz App</h2>
+                        <p>Interactive quiz with static and dynamic questions and attractive UI.</p>
+                    </div>
+
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <p> Built with HTML, CSS, and JavaScript. Interactive quiz with static and dynamic questions and
+                            result tracking.</p>
+
+                        <div class="pjt-btns">
+
+                            <a href="https://abdulbasitchohan.github.io/Quiz-App-/">
+                                <button class="btn-live">Live Demo</button>
+                            </a>
+
+                            <a href="https://github.com/abdulbasitchohan/Quiz-App-.git">
+                                <button class="btn-code">Source Code</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pjt-card">
+                <div class="card-inner">
+
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="./Assets/project-img/restuarent-web.png" alt="Project">
+                        <h2>Restaurant Landing Page</h2>
+                        <p>Modern responsive landing page showcasing restaurant info.</p>
+                    </div>
+
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <p>Built with HTML and CSS. Responsive landing page showcasing restaurant info and menu.</p>
+
+                        <div class="pjt-btns">
+
+                            <a href="https://abdulbasitchohan.github.io/Restaurant-Landing-Web-Page-/">
+                                <button class="btn-live"> Live Demo </button>
+                            </a>
+
+                            <a href="https://github.com/abdulbasitchohan/Restaurant-Landing-Web-Page-.git">
+                                <button class="btn-code">Source Code</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 
             <div class="pjt-card">
@@ -200,7 +141,7 @@
 
                     <!-- Front Side -->
                     <div class="pjt-txt">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
+                        <img src="./Assets/project-img/blog-web.png" alt="Project">
 
                         <h2>Blog Website</h2>
                         <p>Simple responsive blog layout built with HTML and CSS.</p>
@@ -232,7 +173,7 @@
 
                     <!-- Front Side -->
                     <div class="pjt-txt">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
+                        <img src="./Assets/project-img/Todo-App.png" alt="Project">
 
                         <h2>To-Do App</h2>
                         <p>Fully dynamic task manager with a clean and user-friendly interface.</p>
@@ -258,75 +199,104 @@
 
                 </div>
             </div>
-        </div>
+            <div class="pjt-card">
+                <div class="card-inner">
 
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="./Assets/project-img/counter-app.png" alt="Project">
 
-        <div class="pjt-card">
-            <div class="card-inner">
-
-                <!-- Front Side -->
-                <div class="pjt-txt">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
-
-                    <h2>Calculator App</h2>
-                    <p>Responsive calculator for basic arithmetic with smooth UI.</p>
-                </div>
-
-                <!-- Back Side -->
-                <div class="card-back">
-
-                    <h3>Project Details</h3>
-                    <p> Built with HTML, CSS, and JavaScript. Performs basic arithmetic with a
-                        responsive, smooth UI.</p>
-
-                    <div class="pjt-btns">
-                        <a href="">
-                            <button class="btn-live">Live Demo</button>
-                        </a>
-
-                        <a href="">
-                            <button class="btn-code">Source Code</button>
-                        </a>
+                        <h2>Counter App</h2>
+                        <p>Interactive counter with increment, decrement, and reset features.
+                            Modern responsive website with elegant UI and smooth animations.</p>
                     </div>
-                </div>
 
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <p> Built with HTML, CSS, and JavaScript. Simple counter with increment, decrement, and reset
+                            functionality.</p>
+
+                        <div class="pjt-btns">
+
+                            <a href="https://abdulbasitchohan.github.io/Counter-App/">
+
+                                <button class="btn-live">Live Demo</button>
+                            </a>
+                            <a href="https://github.com/abdulbasitchohan/Counter-App.git">
+                                <button class="btn-code">Source Code</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pjt-card">
+                <div class="card-inner">
+
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="./Assets/project-img/calculator.PNG" alt="Project">
+
+                        <h2>Calculator App</h2>
+                        <p>Responsive calculator for basic arithmetic with smooth UI.</p>
+                    </div>
+
+                    <!-- Back Side -->
+                    <div class="card-back">
+
+                        <h3>Project Details</h3>
+                        <p> Built with HTML, CSS, and JavaScript. Performs basic arithmetic with a
+                            responsive, smooth UI.</p>
+
+                        <div class="pjt-btns">
+                            <a href="">
+                                <button class="btn-live">Live Demo</button>
+                            </a>
+
+                            <a href="">
+                                <button class="btn-code">Source Code</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="pjt-card">
+                <div class="card-inner">
+
+                    <!-- Front Side -->
+                    <div class="pjt-txt">
+                        <img src="./Assets/project-img/Bouncing-emoji.png" alt="Project">
+
+                        <h2>Bouncing Emoji Animation</h2>
+                        <p>Playful emoji animation using CSS keyframes with a clean design.</p>
+                    </div>
+
+                    <!-- Back Side -->
+                    <div class="card-back">
+
+                        <h3>Project Details</h3>
+                        <p>Built with HTML and CSS. Fun emoji animation using keyframes with a
+                            playful, clean UI.</p>
+
+                        <div class="pjt-btns">
+                            <a href="">
+                                <button class="btn-live">Live Demo</button>
+                            </a>
+
+                            <a href="">
+                                <button class="btn-code">Source Code</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-
-
-        <div class="pjt-card">
-            <div class="card-inner">
-
-                <!-- Front Side -->
-                <div class="pjt-txt">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Project">
-
-                    <h2>Bouncing Emoji Animation</h2>
-                    <p>Playful emoji animation using CSS keyframes with a clean design.</p>
-                </div>
-
-                <!-- Back Side -->
-                <div class="card-back">
-
-                    <h3>Project Details</h3>
-                    <p>Built with HTML and CSS. Fun emoji animation using keyframes with a
-                        playful, clean UI.</p>
-
-                    <div class="pjt-btns">
-                        <a href="">
-                            <button class="btn-live">Live Demo</button>
-                        </a>
-
-                        <a href="">
-                            <button class="btn-code">Source Code</button>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-
     </section>
 
 </body>

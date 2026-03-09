@@ -13,8 +13,6 @@ html {
     scroll-margin-top: 90px;
 }
 
-/* section {
-} */
 
 abbr[title] {
     text-decoration: none;
@@ -554,123 +552,46 @@ nav ul li a:hover::after {
 }
 
 
-.download-btn {
-    --width: 130px;
-    --height: 40px;
-    --tooltip-height: 40px;
-    --tooltip-width: 95px;
-    --gap-between-tooltip-to-button: 18px;
-    --button-color: #1163ff;
-    --tooltip-color: #fff;
-    width: var(--width);
-    height: var(--height);
-    background: var(--button-color);
+/* CV BUTTON */
+/* From Uiverse.io by Madflows */
+.cv-btn {
     position: relative;
-    text-align: center;
-    border: 2px solid #ffff;
-    border-radius: 0.45em;
-    font-family: "Arial";
-    transition: background 0.3s;
-}
-
-.download-btn::before {
-    position: absolute;
-    content: attr(data-tooltip);
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    background-color: var(--tooltip-color);
-    font-size: 0.9rem;
-    color: #111;
-    border-radius: .25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-}
-
-.download-btn::after {
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: var(--tooltip-color);
-    left: calc(50% - 10px);
-    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-}
-
-.download-btn::after,
-.download-btn::before {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s;
-}
-
-.download-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.download-wrap,
-.download-text,
-.icon {
     overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #ffffff21;
+    background-size: 400%;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.cv-btn:hover::before {
+    font-size: 1.1rem;
+    transform: scaleX(1);
+}
+
+.cv-btn-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cv-btn::before {
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    color: #fff;
-}
-
-.download-text {
-    top: 0
-}
-
-.download-text,
-.icon {
-    transition: top 0.5s;
-}
-
-.icon {
-    color: #fff;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon svg {
-    width: 24px;
-    height: 24px;
-}
-
-.download-btn:hover {
-    background: #6c18ff;
-}
-
-.download-btn:hover .download-text {
-    top: -100%;
-}
-
-.download-btn:hover .icon {
     top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #277cec, #ff58de);
+    transition: all 0.475s;
 }
-
-.download-btn:hover:before,
-.download-btn:hover:after {
-    opacity: 1;
-    visibility: visible;
-}
-
-.download-btn:hover:after {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-}
-
-.download-btn:hover:before {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-}
-
-
 
 .skills-sec {
     height: 80vh;
@@ -782,7 +703,7 @@ nav ul li a:hover::after {
 
 .pjt-align {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
@@ -1034,17 +955,6 @@ button:hover {
     gap: 30px;
 }
 
-/* Glow background */
-.contact-section::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, #3f96fa 0%, transparent 70%);
-    filter: blur(120px);
-    opacity: 0.3;
-}
-
 /* CARD */
 .contact-card {
     position: relative;
@@ -1125,6 +1035,7 @@ button:hover {
 /* Responsive */
 @media(max-width:900px) {
     .contact-card {
+        padding: 20px;
         grid-template-columns: 1fr;
     }
 
@@ -1146,38 +1057,8 @@ footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* 
-@media (max-width : 600px) {
-    nav ul  {
-        display: none;
-    }
-    .menu{
-        display: block;
-    }
 
-    .card{
-        height: auto;
-        top: 50%;
-    }
-
-     
-
-    .S-btns{
-        display: none;
-
-    }
-
-    .skills-icon {
-        grid-template-columns: auto auto;
-    }
-} */
-
-
-
-/* =========================
-TABLET (1024px)
-========================= */
-
+/* TABLET  */
 @media (max-width:1024px) {
 
     .sec-1 {
@@ -1223,9 +1104,7 @@ TABLET (1024px)
 }
 
 
-/* =========================
-TABLET SMALL (768px)
-========================= */
+/* TABLET SMALL  */
 
 @media (max-width:768px) {
 
@@ -1246,17 +1125,17 @@ TABLET SMALL (768px)
     }
 
     .card {
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
+    }
+
+    .skills-sec {
+        flex-direction: row;
     }
 
     .skills-icon {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
-    }
-
-    .pjt-card {
-        width: 280px;
     }
 
     .contact-card {
@@ -1274,9 +1153,7 @@ TABLET SMALL (768px)
 }
 
 
-/* =========================
-MOBILE (480px)
-========================= */
+/*  MOBILE (480px)*/
 
 @media (max-width:480px) {
 
@@ -1323,16 +1200,12 @@ MOBILE (480px)
     }
 
     .skill-card {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
-    .pjt-sec {
-        width: 95vw;
-    }
-
-    .pjt-card {
-        width: 100%;
+    .skill-back {
+        font-size: 1.2rem ;
     }
 
     .contact-card {
@@ -1345,15 +1218,16 @@ MOBILE (480px)
     }
 
     .S-btns {
+        position: static;
         display: none;
     }
 
 }
 
 
-/* =========================
+/*  
 EXTRA SMALL (360px)
-========================= */
+  */
 
 @media (max-width:360px) {
 
@@ -1375,7 +1249,13 @@ EXTRA SMALL (360px)
     }
 
     .contact-left h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+
+    }
+
+    .S-btns {
+        position: static;
+        display: none;
     }
 
 }
