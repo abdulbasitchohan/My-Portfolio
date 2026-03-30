@@ -20,21 +20,28 @@
     <canvas id="canvas"></canvas>
 
     <header>
-        <nav class="nav">
-            <div class="logo">Portfolio</div>
+        <nav>
+            <div class="logo">
+                <h1> <a href="#home"> ABC Tech </a> </h1>
+            </div>
 
-            <ul class="links" id="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skill</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+            <!-- MENU ICON -->
+            <div class="menu-icon">
+                <i class="ri-menu-3-line"></i>
+            </div>
+
+            <ul id="nav-links">
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects </a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <div class="menu-icon" id="icon">
-                <i class="ri-menu-line"></i>
-            </div>
+            <!-- <button id="download-btn"> Download </button> -->
         </nav>
+
     </header>
 
     <section class="sec-1" id="home">
@@ -468,9 +475,27 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script> -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+</script> -->
+<script>
+    let icon = document.querySelector(".menu-icon")
+    let menu = document.querySelector("#nav-links");
+
+    let open = false;
+
+    icon.addEventListener("click", () => {
+        open = !open;
+
+        menu.classList.toggle("active");
+
+        if (open) {
+            icon.innerHTML = '<i class="ri-close-line"></i>';
+        } else {
+            icon.innerHTML = '<i class="ri-menu-line"></i>';
+        }
+    });
 </script>
 
 <script src="./script.js"></script>
