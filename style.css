@@ -275,7 +275,7 @@ header {
 
 /* MENU ICON */
 .menu-icon {
-    font-size: 26px;
+    font-size: 2.1rem;
     cursor: pointer;
     display: none;
 }
@@ -397,7 +397,8 @@ nav ul li a:hover::after {
 
 .sec-1_cnt>p {
     font-size: 1.1rem;
-    font-family: 'Arial Narrow';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     width: 500px;
     margin: 12px 0px;
 }
@@ -717,6 +718,7 @@ nav ul li a:hover::after {
     height: 420px;
     perspective: 1200px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .card-inner {
@@ -1050,7 +1052,7 @@ button:hover {
 
 /* Footer Section */
 footer {
-    padding: 20px;
+    padding: 16px;
     text-align: center;
     background-color: #02062e48;
     backdrop-filter: blur(5px);
@@ -1058,6 +1060,10 @@ footer {
     position: relative;
     overflow: hidden;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer h3 {
+    padding: 8px;
 }
 
 
@@ -1073,6 +1079,7 @@ footer {
 
     .sec-1_cnt>p {
         width: 100%;
+        font-size: 1.1rem;
     }
 
     .card {
@@ -1117,32 +1124,34 @@ footer {
     }
 
     nav ul {
+        background-color: #00042b94;
+        /* background-color: #02062e48; */
         position: absolute;
         top: -400px;
-        /* hidden upar */
         left: 0;
         width: 100%;
         flex-direction: column;
-        background: rgba(2, 6, 46, 0.95);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
         text-align: center;
-        padding: 20px 0;
+        justify-content: center;
+        /* align-items: center; */
+        padding-bottom: 20px;
         transition: 0.5s ease;
         gap: 25px;
+
+        /* border-bottom: 1px solid #ffff; */
+
+    }
+
+    nav ul li {
+        padding: 10px;
+        /* box-shadow: 1px 2px 4px #000; */
+        /* border-top: 1px solid #ffff; */
     }
 
     nav ul.active {
         top: 90px;
     }
-
-    /* 
-        nav ul {
-            display: none;
-        }
-
-        .menu {
-            display: block;
-        } */
 
     .sec-1_cnt>h1 {
         font-size: 3rem;
@@ -1202,7 +1211,8 @@ footer {
     }
 
     .sec-1_cnt>p {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+
     }
 
     .card {

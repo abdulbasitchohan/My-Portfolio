@@ -19,9 +19,10 @@
     <!-- <canvas id="particles"></canvas> -->
     <canvas id="canvas"></canvas>
 
-    <header>
+    <header data-aos="fade-down">
+
         <nav>
-            <div class="logo">
+            <div class="logo" data-aos="flip-right">
                 <h1> <a href="#home"> ABC Tech </a> </h1>
             </div>
 
@@ -52,12 +53,12 @@
                     <span id="text"></span><span class="cursor">|</span>
                 </h2>
             </div>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate eveniet veritatis? Animi,
-                inventore,</p>
+            <p>As a Web Developer, I build robust and scalable websites using modern technologies — ensuring speed,
+                responsiveness, and a smooth user experience across all devices.</p>
 
 
             <!-- From Uiverse.io by zaeniahmad-id -->
-            <div class="S-btns">
+            <div class="S-btns" data-aos="fade-up-left">
                 <a id="linkedin" href="https://linkedin.com/in/abdul-basit-tech/">
                     <abbr title="Linkedin">
                         <i class="ri-linkedin-fill"></i>
@@ -118,15 +119,17 @@
     <!-- SECTION 2 ABOUT ME -->
 
     <section class="about-sec" id="about" style="justify-content: space-around;">
-        <div class="sec-1_img">
+        <div class="sec-1_img" data-aos="fade-down-right">
             <img src="./Assets/My_img.png" alt="About Image">
         </div>
 
-        <div class="sec-1_cnt">
+        <div class="sec-1_cnt" data-aos="fade-down-left">
             <h1> Abdul Basit </h1>
             <h2> And I'm a Frontend Developer</h2>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate eveniet veritatis? Animi,
-                inventore,</p>
+            <p>I’m a Web Developer focused on building scalable, high-performance websites with clean code and modern
+                design.
+                I create responsive, user-friendly web applications that deliver smooth and reliable experiences across
+                all devices.</p>
 
             <!-- <button id="download-btn"> Download CV </button> -->
             <a href="./Assets/CV.pdf" target="_blank">
@@ -145,8 +148,8 @@
     <section id="skills" class="skills-sec">
 
 
-        <h1>My Skills</h1>
-        <div class="skills-icon">
+        <h1 data-aos="zoom-in-up">My Skills</h1>
+        <div class="skills-icon" data-aos="fade-down">
 
             <!-- HTML -->
 
@@ -292,10 +295,10 @@
     <section class="pjt-sec">
 
         <div id="projects">
-            <h1>My Projects</h1>
+            <h1 data-aos="zoom-out-up">My Projects</h1>
         </div>
 
-        <div class="pjt-align">
+        <div class="pjt-align" data-aos="zoom-out-down">
             <div class="pjt-card">
                 <div class="card-inner">
 
@@ -395,7 +398,7 @@
         </div>
 
         <a href="./Projects.html">
-            <button class="more-pjt"> More Projects</button>
+            <button class="more-pjt" data-aos="zoom-in-down"> More Projects</button>
         </a>
 
     </section>
@@ -408,7 +411,7 @@
         <div class="contact-card">
 
             <!-- LEFT -->
-            <div class="contact-left">
+            <div class="contact-left" data-aos="zoom-out-right">
                 <h2 class="name">Open for Freelance & Professional Opportunities</h2>
                 <p>
                     I help businesses and individuals transform their ideas into modern, responsive, and high-performing
@@ -427,7 +430,7 @@
                 <a id="email" target="_blank"
                     href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrfScmxnDgWQQcTjqQvTNMsZMnnmtnkfXNmWtQBXNHRJXvXLtLNDdQQhdLlNhwZgZkRXJq">
 
-                    <div class="info-item">
+                    <div class="info-item" data-aos="zoom-out-left">
                         <p><i class="ri-mail-line"></i></p>
                         <span>abdulbasitchohan40@gmail.com </span>
                     </div>
@@ -436,21 +439,21 @@
                 <a id="whatsapp" href="https://wa.me/923113444105?text=Hello%20I%20want%20to%20discuss%20a%20project"
                     target="_blank">
 
-                    <div class="info-item">
+                    <div class="info-item" data-aos="zoom-out-left">
                         <p> <i class="ri-whatsapp-line"></i> </p>
                         <span>+92 311 3444105</span>
                     </div>
                 </a>
 
                 <a id="linkedin" href="https://linkedin.com/in/abdul-basit-tech/">
-                    <div class="info-item">
+                    <div class="info-item" data-aos="zoom-out-left">
                         <p> <i class="ri-linkedin-fill"></i></p>
                         <span>Abdul Basit Tech</span>
                     </div>
                 </a>
 
                 <a id="github" href="https://github.com/abdulbasitchohan">
-                    <div class="info-item">
+                    <div class="info-item" data-aos="zoom-out-left">
                         <p><i class="ri-github-line"></i></p>
                         <span> Abdul Basit Tech</span>
                     </div>
@@ -463,7 +466,7 @@
     <footer>
 
 
-        <!-- <h2>Let's Build Something Exceptional</h2> -->
+        <h3>Building fast, responsive, and user-focused web experiences.</h3>
 
         <!-- <div class="pst"> -->
         © 2026 Abdul Basit • All Rights Reserved
@@ -472,32 +475,18 @@
 
 
 </body>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script> -->
-<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script> -->
-<script>
-    let icon = document.querySelector(".menu-icon")
-    let menu = document.querySelector("#nav-links");
-
-    let open = false;
-
-    icon.addEventListener("click", () => {
-        open = !open;
-
-        menu.classList.toggle("active");
-
-        if (open) {
-            icon.innerHTML = '<i class="ri-close-line"></i>';
-        } else {
-            icon.innerHTML = '<i class="ri-menu-line"></i>';
-        }
-    });
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js">
 </script>
 
-<script src="./script.js"></script>
+<script>
+    AOS.init();
+
+</script>
+
+<script src="./script.js">
+</script>
 
 </html>

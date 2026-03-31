@@ -191,3 +191,22 @@ function typeEffect() {
 
 typeEffect();
 
+
+let icon = document.querySelector(".menu-icon")
+let menu = document.querySelector("#nav-links");
+
+let open = false;
+
+icon.addEventListener("click", () => {
+    open = !open;
+
+    menu.classList.toggle("active");
+
+    if (open) {
+        icon.innerHTML = '<i class="ri-close-line"></i>';
+    } else {
+        icon.innerHTML = '<i class="ri-menu-3-line" ></i>';
+    }
+});
+
+
